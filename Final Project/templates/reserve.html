@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <script src="https://kit.fontawesome.com/87c81089bd.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="/static/styles.css" rel="stylesheet">
+        <link href="/static/imagehover.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@500&display=swap" rel="stylesheet">
+        <title>Cool Website Name</title>
+    </head>
+    <body>
+      <section>
+        <div class="back bg-white text-dark fixed-top">
+        <ul class="border header nav">
+            <li class ="nav-item justify-content-start">
+              <img class = "img-responsive" src="https://benares.ca/wp-content/uploads/2020/03/logo-dark.png" style="padding: 0.5rem 0rem 0.5rem 10rem;" width="85%" >
+           </li>
+            <li class=' top m-3 ms-auto' >
+                <a role="button" class="nav-link text-dark" href="/"><u><h2>HOME</h2></u></a>
+            </li>
+            <li  class=' top m-3'>
+                  <a role="button" class="nav-link text-dark " href="menu"><h2>MENU</h2></a>
+            </li>
+            <li  class='top m-3'>
+                <a role="button" class="nav-link text-dark " href="https://www.clover.com/online-ordering/benares-toronto"><h2>ORDER NOW</h2></a>
+            </li>
+            <li  class=' top m-3'>
+              <a role="button" class="nav-link text-dark " href="reserve"><h2>RESERVATIONS</h2></a>
+           </li>
+           <li  class=' top m-3'>
+              <a role="button" class="nav-link text-dark " href="contact"><h2>CONTACT</h2></a>
+          </li>
+          <li>
+            <a href="/login" title="login icons">n</a>
+          </li>
+        </ul>
+    </div>
+  </section>
+      <div class="overlay-content">
+          <div class="parallax" style="background-image: url('https://i.imgur.com/PT8VV5U.jpg'); height: 900px; width: 100%;">&nbsp;</div>
+          <div class="overlay-text" style="width: 75%; min-width: 350px;">
+              <div style=" font-family: Arial, Helvetica, sans-serif; letter-spacing: 0.4em;">
+                  <h1 class="text-light">MAKE A<br><h2 class="text-light">RESERVATION</h2><br></h1>
+              </div>
+          </div>
+        </div>
+        <div class="m-5 text-center">
+            <h2 style="padding: 0rem 0rem 2rem 0rem;" >MAKE ONLINE RESERVATION</h2>
+            <form class="form-control form-control-lg" action="/reserve" method="post">
+              <div class="dnt text-center">
+                <div class="row g-0 m-5 text-center">
+                  <div class="col-md-3">
+                    <div class="text-center">
+                          <p>Select date:
+                          <input type="date" name="date" class=" form-select-lg ">
+                        </p>
+                    </div>
+                  </div>
+                 <div class="col-md-2" style="0rem 0rem 0rem 10rem;">
+                  <select class=" form-select-lg " name="time" id="time">
+                    <option disabled selected>Time</option>
+                    <option value="12:00 PM">12:00 PM</option>
+                    <option value="12:30 PM">12:30 PM</option>
+                    <option value="1:00 PM">1:00 PM</option>
+                    <option value="1:30 PM">1:30 PM</option>
+                    <option value="2:00 PM">2:00 PM</option>
+                    <option value="2:30 PM">2:30 PM</option>
+                    <option value="3:00 PM">3:00 PM</option>
+                    <option value="3:30 PM">3:30 PM</option>
+                    <option value="4:00 PM">4:00 PM</option>
+                    <option value="4:30 PM">4:30 PM</option>
+                    <option value="5:00 PM">5:00 PM</option>
+                    <option value="5:30 PM">5:30 PM</option>
+                    <option value="6:00 PM">6:00 PM</option>
+                    <option value="6:30 PM">6:30 PM</option>
+                    <option value="7:00 PM">7:00 PM</option>
+                    <option value="7:30 PM">7:30 PM</option>
+                    <option value="8:00 PM">8:00 PM</option>
+                    <option value="8:30 PM">8:30 PM</option>
+                    <option value="9:00 PM">9:00 PM</option>
+                    <option value="9:30 PM">9:30 PM</option>
+                    <option value="9:45 PM">9:45 PM</option>
+                    </select>
+                  </div>
+            </div>
+              </div>
+                <div class="m-5 text-center">
+                    <input type = "text" name = "title" placeholder="Title/Salutation"/>
+                    <input type = "text" name = "fname" placeholder="First name"/>
+                    <input type = "text" name = "lname" placeholder="Last name"/>
+                </div>
+                <div class="m-5 text-center">
+                    <input style="padding: 0rem 7.5rem 0rem 0rem;" type = "email" name = "email" placeholder="Email"/>
+                    <input style="padding: 0rem 7.5rem 0rem 0rem;" type = "text" name = "phone" placeholder="Phone Number"/>
+                </div>
+                <div class="m-5 text-center">
+                    <select class="form-select-lg" name="party" style="width:37%">
+                        <option disabled selected>Party Size (Members)*</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                  </div>
+                  <div class="m-5 text-center">
+                    <input type = "text" name = "notes" style="padding: 0rem 30rem 5rem 0rem;"  placeholder="Notes"></input>
+                  </div>
+                  <button type="submit" class="btn btn-dark  btn-lg">Submit</button>
+                </form>
+        </div>
+                <div class="row g-0 margin">
+                    <div class="col-md-6">
+                      <div class="card-body">
+                          <h3 class="para card-title " style="letter-spacing: 0.2em; font-family: Arial, Helvetica, sans-serif;">
+                            RESERVE BY PHONE
+                          </h3>
+                        <p class="para card-text  fs-5" >
+                            We take reservations for lunch and dinner. To make a reservation, Please call<br> us between 12 noon and 10 pm 7 days a week to make your reservations.<br><br>
+                            We do not book the bar area – we leave this for walk-in guests to ensure that we <br> always offer some tables for those who have not booked.</p>
+                      </div>
+                    </div>
+                   <div class="col-md-4">
+                    <h3 class="para card-title " style="letter-spacing: 0.2em; font-family: Arial, Helvetica, sans-serif;">
+                        PRIVATE DINING & EVENTS
+                      </h3>
+                    <p class="para card-text  fs-5" >
+                        Whatever your event or celebration, we are here to make your special day a truly memorable one. Benares private dining experts are more than happy to create custom floral arrangements and arrange for guests to dine in perfect Indian cuisine during the course of their meal.</p>
+                    </div>
+              </div>
+        </div>
+    </body>
+</html>

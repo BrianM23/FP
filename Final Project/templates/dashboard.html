@@ -1,0 +1,77 @@
+{% block title %}{% endblock %}
+{% block main %}
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <script src="https://kit.fontawesome.com/87c81089bd.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="/static/styles.css" rel="stylesheet">
+        <link href="/static/imagehover.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@500&display=swap" rel="stylesheet">
+        <title>Cool Website Name</title>
+    </head>
+    <body>
+        <div class="back bg-white text-dark fixed-top">
+        <ul class="border header nav">
+            <li class ="nav-item justify-content-start">
+              <img class = "img-responsive" src="https://benares.ca/wp-content/uploads/2020/03/logo-dark.png" style="padding: 0.5rem 0rem 0.5rem 10rem;" width="85%">
+           </li>
+            <li class=' top m-3 ms-auto' >
+                <a role="button" class="nav-link text-dark" href="/dashboard"><h2>MESSAGES</h2></a>
+            </li>
+            <li  class=' top m-3'>
+                  <a role="button" class="nav-link text-dark " href="/reservations"><h2>RESERVATIONS</h2></a>
+            </li>
+        </ul>
+    </div>
+  <div style="padding: 9rem 0rem 0rem 0rem;">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            {% for contact in contacts %}
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    {{ contact["subject"] }}
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+            <table class = "table table-striped" >
+    <thead>
+    <tr>
+        <th>Date Sent:</th>
+        <td>{{ contact["Date"] }}</td>
+    </tr>
+    <tr>
+        <th>Name:</th>
+        <td>{{ contact["name"] }}</td>
+    </tr>
+    <tr>
+        <th>Phone:</th>
+        <td>{{ contact["phone"] }}</td>
+    </tr>
+    <tr>
+        <th>Email:</th>
+        <td>{{ contact["email"] }}</td>
+    </tr>
+        <th>Subject:</th>
+        <td>{{ contact["subject"] }}</td>
+    </tr>
+    <tr>
+        <th>Notes:</th>
+        <td>{{ contact["notes"] }}</td>
+    </tr>
+    </thead>
+    </table>
+    </div>
+</div>
+</div>
+</div>
+{%endfor%}
+</div>
+</body>
+{% endblock %}
